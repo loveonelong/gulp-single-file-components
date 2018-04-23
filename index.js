@@ -166,7 +166,13 @@ module.exports = function(args) {
         case 'style':
           return compiler.__get__('processStyle')(node, filePath, id);
         case 'script':
-          return compiler.__get__('processScript')(node, filePath, content);
+          // ------
+          // I don`t want to use it
+          // But I have no better way
+          // If I have time I will find a better solution
+          // So I commented out it now :)
+          // ------
+          // return compiler.__get__('processScript')(node, filePath, content);
         default:
           // Process custom tag
           for (let tag in options.tags) {
